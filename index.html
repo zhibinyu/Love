@@ -13,6 +13,8 @@
 </head>
 
 <body style=" background-image: url('2936257.gif'); background-position: center top; background-repeat: repeat;">
+
+   
     <div id="mainDiv">
         <div id="content" style=" float: left;">
             <div style="float: left; margin: 0 auto; width: 900px; margin-top: -300px; ">
@@ -111,6 +113,26 @@
     </script>
     <div style="text-align:center;clear:both">
 
+
+        <audio src="http://qiniuuwmp3.changba.com/636308338.mp3" id="Jaudio" class="media-audio" autoplay=autoplay preload=preload loop="loop"></audio>  
+        <script>
+            function audioAutoPlay(id) {
+                var audio = document.getElementById(id),
+                    play = function () {
+                        audio.play();
+                        document.removeEventListener("touchstart", play, false);
+                    };
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    play();
+                }, false);
+                document.addEventListener('YixinJSBridgeReady', function () {
+                    play();
+                }, false);
+                document.addEventListener("touchstart", play, false);
+            }
+            audioAutoPlay('Jaudio');
+        </script>
     </div>
 </body>
 </html>
