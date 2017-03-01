@@ -9,7 +9,7 @@
 #messages{display:none;font-weight:bold}
 #elapseClock .digit{font-family:"digit";font-size:36px}
 #loveu{padding:5px;font-size:22px;margin-top:80px;margin-right:120px;text-align:right;display:none;font-weight:bold}
-#loveu .signature{margin-top:10px;font-size:20px;font-style:italic}
+#loveu .signature{margin-top:10px;font-size:20px;font-style:italic;font-weight:bold}
 #clickSound{display:none}
 
 
