@@ -43,13 +43,14 @@ function getHeartPoint(angle) {
 }
 
 function startHeartAnimation() {
+    
 	var interval = 50;
 	var angle = 10;
 	var heart = new Array();
 	var animationTimer = setInterval(function () {
-        //展示动画前，先把文字区域隐藏了
-	    //$("#code").hide();
-	    $("#code").animate({ height: "0px" }, "slow");
+	    //展示动画前，先把文字区域隐藏了
+	   // $("#code").animate({ height: "0px" });
+	    
 		var bloom = getHeartPoint(angle);
 		var draw = true;
 		for (var i = 0; i < heart.length; i++) {
@@ -65,12 +66,14 @@ function startHeartAnimation() {
 			garden.createRandomBloom(bloom[0], bloom[1]);
 		}
 		if (angle >= 30) {
-			clearInterval(animationTimer);
+		    clearInterval(animationTimer);
 			showMessages();
 		} else {
 			angle += 0.2;
 		}
 	}, interval);
+
+	
 }
 
 (function($) {
@@ -87,7 +90,10 @@ function startHeartAnimation() {
 				}
 				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
 				if (progress >= str.length) {
-					clearInterval(timer);
+				    $("#code").fadeOut(3000);
+				    //startHeartAnimation();
+				    clearInterval(timer);
+				   
 				}
 			}, 75);
 		});
@@ -135,5 +141,6 @@ function adjustCodePosition() {
 }
 
 function showLoveU() {
-	$('#loveu').fadeIn(3000);
+    $('#loveu').fadeIn(3000);
+    //$("#code").hide();
 }
