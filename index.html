@@ -41,7 +41,7 @@
                         I want to say:<br />
                         Baby, I love you forever;<br />
                     </div>
-
+                    <div id="photo" style=" background-image: url('20170303111109.png'); background-position: center top; background-repeat: no-repeat;"></div>
 
 
                     <div style=" margin-top:200px;">
@@ -49,7 +49,7 @@
                             <canvas id="garden"></canvas>
                             <div id="words">
                                 <div id="messages">
-                                    Flora, I have fallen in love with you for
+                                    Flora,I have fallen in love with you for
                                     <div id="elapseClock"></div>
                                 </div>
                                 <div id="loveu">
@@ -75,7 +75,7 @@
         var offsetX = $("#loveHeart").width() / 2;
         var offsetY = $("#loveHeart").height() / 2 - 55;
         var together = new Date();
-        together.setFullYear(2016, 10, 14);
+        together.setFullYear(2016, 9, 14);
         together.setHours(12);
         together.setMinutes(0);
         together.setSeconds(0);
@@ -101,7 +101,14 @@
                 //$("#code").css("display", "none")
                 startHeartAnimation();
                 //$("#code").css("display","none");
-            }, 79000);
+            }, 89000);
+            setTimeout(function () {
+                $("#photo").animate({ height: "500px" }, 6000);
+            }, 78000);
+            setTimeout(function () {
+                $("#photo").fadeOut(3000);
+            }, 85000);
+
 
             timeElapse(together);
             setInterval(function () {
