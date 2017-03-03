@@ -21,3 +21,5 @@
 #copyright{margin-top:10px;text-align:center;width:100%;color:#666}
 #errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}
 #copyright a{color:#666}
+
+#photo{float:left;height:0px; margin:0; width:670px;  }
